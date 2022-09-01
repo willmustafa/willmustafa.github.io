@@ -1,8 +1,7 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <main>
-    <div>Home</div>
+    <div>{{ $t("home.headline") }}</div>
   </main>
 </template>
