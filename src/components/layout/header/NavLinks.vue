@@ -1,16 +1,16 @@
 <template>
   <ol>
     <li>
-      <router-link to="/">Home</router-link>
+      <router-link to="/">{{ $t("nav.home") }}</router-link>
     </li>
     <li>
-      <router-link to="/">Portfolio</router-link>
+      <router-link to="/">{{ $t("nav.portfolio") }}</router-link>
     </li>
     <li>
-      <router-link to="/">Sobre</router-link>
+      <router-link to="/">{{ $t("nav.about") }}</router-link>
     </li>
     <li>
-      <router-link to="/">Contato</router-link>
+      <router-link to="/">{{ $t("nav.contact") }}</router-link>
     </li>
   </ol>
 </template>
@@ -19,4 +19,15 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+ol {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+li {
+  position: relative;
+  margin: 0 2rem;
+}
+</style>
