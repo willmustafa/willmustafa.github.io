@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "PortfolioPrincipal",
+};
 </script>
 
 <style></style>
