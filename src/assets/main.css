@@ -19,6 +19,14 @@
     -moz-box-align: center;
 }
 
+.title {
+    font-family: 'Noto Serif', -apple-system, sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 @media screen and (min-width: 1400px){
     .container {
         max-width: 1320px;

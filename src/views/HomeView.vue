@@ -7,7 +7,9 @@ import ContactSection from "../components/layout/ContactSection.vue";
 <template>
   <main class="container">
     <div class="vertical-center">
-      {{ $t("home.headline") }}
+      <h1 class="title bold">
+        {{ $t("home.headline") }}
+      </h1>
     </div>
     <div class="vertical-center">
       <PortfolioPrincipal />
