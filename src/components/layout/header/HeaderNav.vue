@@ -28,7 +28,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
-  height: 120px;
+  height: var(--header-height);
   padding: 0px 8rem;
 }
 
