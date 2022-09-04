@@ -2,6 +2,7 @@
 import AboutSection from "../components/layout/AboutSection.vue";
 import PortfolioPrincipal from "../components/layout/PortfolioPrincipal.vue";
 import ContactSection from "../components/layout/ContactSection.vue";
+import FooterFixed from "../components/layout/footer/FooterFixed.vue";
 
 export default {
   name: "HomeView",
@@ -14,6 +15,7 @@ export default {
     AboutSection,
     PortfolioPrincipal,
     ContactSection,
+    FooterFixed,
   },
 };
 </script>
@@ -41,6 +43,7 @@ export default {
     <div class="vertical-center">
       <ContactSection />
     </div>
+    <FooterFixed />
   </main>
 </template>
 
