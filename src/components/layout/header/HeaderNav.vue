@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav>
+    <nav class="container">
       <div class="logo">
         <a href="/">
           <img src="@/assets/images/logo.png" alt="" />
@@ -29,7 +29,6 @@ header {
   width: 100%;
   z-index: 10;
   height: var(--header-height);
-  padding: 0px 8rem;
 }
 
 nav {

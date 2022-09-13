@@ -6,12 +6,25 @@ h1, .h1 {
     margin-bottom: 1rem;
 }
 
+h2, .h2 {
+    font-size: 5.5rem;
+    line-height: 1.2;
+}
+
 h3, .h3 {
     font-size: 1.5rem;
 }
 
-b, .b {
-    font-weight: bold;
+h4, .h4 {
+    font-size: 1.25rem;
+}
+
+h5, .h5 {
+    font-size: 1rem;
+}
+
+b, .b, .bold {
+    font-weight: 900 !important;
 }
 
 .container{
@@ -25,20 +38,17 @@ b, .b {
 .vertical-center{
     display: flex;
     -moz-box-pack: center;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 100vh;
     padding: 0px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     -moz-box-align: center;
 }
 
 .title {
     font-family: 'Noto Serif', -apple-system, sans-serif;
-}
-
-.bold{
-    font-weight: bold;
+    letter-spacing: 7px;
 }
 
 .text-justify{
@@ -74,4 +84,28 @@ b, .b {
     .container{
         max-width: 540px;
     }
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-purple{
+    color: var(--purple)
+}
+
+.text-green{
+    color: var(--green)
+}
+
+.text-neon-blue{
+    color: var(--neon-blue)
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 1.5rem;
 }

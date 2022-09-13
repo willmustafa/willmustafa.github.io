@@ -1,12 +1,15 @@
 <template>
   <section>
-    <h3>Principais projetos</h3>
+    <PorfolioPrincipalElement />
+    <PorfolioPrincipalElement />
   </section>
 </template>
 
 <script>
+import PorfolioPrincipalElement from "../PorfolioPrincipalElement.vue";
 export default {
   name: "PortfolioPrincipal",
+  components: { PorfolioPrincipalElement },
 };
 </script>
 

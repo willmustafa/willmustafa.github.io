@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;900&family=Noto+Serif:wght@400;700&display=swap');
 
 :root{
   --white-bluesh: #f4f9fc;
@@ -31,7 +31,7 @@
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  font-weight: normal;
+  font-weight: unset;
 }
 
 body {
@@ -45,6 +45,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 3px;
+  font-weight: 300;
 }
 
 a {
