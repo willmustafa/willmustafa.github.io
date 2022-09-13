@@ -20,7 +20,7 @@ export default {
 
 <template>
   <main class="container">
-    <div class="vertical-center">
+    <section class="vertical-center">
       <div class="w-50">
         <h4 class="mb-1">
           {{ $t("home.jumbo") }}
@@ -35,16 +35,16 @@ export default {
           alt=""
         />
       </div>
-    </div>
-    <div class="vertical-center">
+    </section>
+    <section class="vertical-center">
       <AboutSection />
-    </div>
-    <div class="vertical-center">
+    </section>
+    <section class="vertical-center">
       <PortfolioPrincipal />
-    </div>
-    <div class="vertical-center">
+    </section>
+    <section class="vertical-center">
       <ContactSection />
-    </div>
+    </section>
   </main>
 </template>
 

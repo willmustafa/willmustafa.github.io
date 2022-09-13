@@ -12,4 +12,9 @@ export default {
     about: "Sobre",
     contact: "Contato",
   },
+  about: {
+    title: "Sobre Mim",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at felis placerat, sagittis turpis sit amet, pretium enim. Praesent ac ornare elit. Integer fringilla ac risus ac porttitor. Nulla laoreet metus velit, at ultrices ex gravida eu. Quisque eu urna rutrum ex interdum scelerisque eget vitae lectus. Phasellus ornare sapien et blandit ornare. Suspendisse aliquam sed lectus a bibendum. Phasellus dapibus sagittis nibh ut posuere. Quisque viverra ligula et scelerisque tempus. Proin ligula tortor, lacinia vel justo aliquet, ultrices auctor nulla. Proin viverra consectetur nisl id viverra.",
+  },
 };
