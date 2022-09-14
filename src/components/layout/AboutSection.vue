@@ -2,20 +2,56 @@
   <div class="wrapper">
     <h2 class="bold mb-2">{{ $t("about.title") }}</h2>
     <h5>{{ $t("about.description") }}</h5>
+    <h4 class="bold mt-1">Algumas tecnologias que trabalho:</h4>
     <ul class="skills">
-      <li>JavaScript (ES6+)</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>Eleventy</li>
-      <li>Node.js</li>
-      <li>WordPress</li>
+      <ImageFollow :image="JavascriptLogo" text="Javascript" />
+      <ImageFollow :image="ReactLogo" text="React" />
+      <ImageFollow :image="VueLogo" text="Vue" />
+      <ImageFollow :image="NodeLogo" text="Node.js" />
+      <ImageFollow :image="MongodbLogo" text="MongoDB" />
+      <ImageFollow :image="PostgresLogo" text="Postgres" />
+      <ImageFollow :image="MysqlLogo" text="MySQL" />
     </ul>
   </div>
 </template>
 
 <script>
+import ImageFollow from "../ImageFollow.vue";
+
+import JavascriptLogo from "../../assets/icons/JavascriptLogo.png";
+import MongodbLogo from "../../assets/icons/MongodbLogo.png";
+import MysqlLogo from "../../assets/icons/MysqlLogo.png";
+import NodeLogo from "../../assets/icons/NodeLogo.png";
+import PostgresLogo from "../../assets/icons/PostgresLogo.png";
+import ReactLogo from "../../assets/icons/ReactLogo.png";
+import VueLogo from "../../assets/icons/VueLogo.png";
+
 export default {
   name: "AboutSection",
+  components: { ImageFollow },
+  computed: {
+    JavascriptLogo() {
+      return JavascriptLogo;
+    },
+    ReactLogo() {
+      return ReactLogo;
+    },
+    MongodbLogo() {
+      return MongodbLogo;
+    },
+    MysqlLogo() {
+      return MysqlLogo;
+    },
+    NodeLogo() {
+      return NodeLogo;
+    },
+    PostgresLogo() {
+      return PostgresLogo;
+    },
+    VueLogo() {
+      return VueLogo;
+    },
+  },
 };
 </script>
 
@@ -28,25 +64,10 @@ export default {
 }
 
 .skills {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
+  display: inline-flex;
+  flex-wrap: wrap;
   gap: 0px 10px;
   padding: 0px;
-  margin: 20px 0px 0px;
-  overflow: hidden;
   list-style: none;
-}
-
-.skills li {
-  position: relative;
-  margin-bottom: 10px;
-  padding-left: 20px;
-}
-
-.skills li::before {
-  content: "▹";
-  position: absolute;
-  left: 0px;
-  line-height: 12px;
 }
 </style>
