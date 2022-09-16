@@ -1,24 +1,57 @@
 <template>
-  <a class="portfolio-wrapper" href="#">
+  <a
+    class="portfolio-wrapper"
+    :href="link"
+    :class="{ 'flex-row-reverse': right }"
+  >
     <div class="portfolio-info">
-      <h5 class="text-neon-blue">Projeto Open Source</h5>
-      <h2 class="title bold uppercase">Money 7</h2>
-      <h3 class="mb-2">React, Express, Postgres</h3>
-      <h4>
-        Site para controle financeiro, com importação de movimentações e
-        definições de metas.
-      </h4>
+      <h5 class="text-neon-blue">{{ overTitle }}</h5>
+      <h2 class="title bold uppercase">{{ title }}</h2>
+      <h3 class="mb-2">{{ subtitle }}</h3>
+      <h4>{{ description }}</h4>
     </div>
     <div class="portfolio-image">
       <div class="image-wrapper">
-        <img src="../assets/images/preview-3.922e88b86f7.webp" alt="" />
+        <img :src="image" alt="" />
       </div>
     </div>
   </a>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "PortfolioPrincipalElement",
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    subtitle: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    overTitle: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+      default: "#",
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -26,7 +59,12 @@ export default {};
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 11rem;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+  text-align: right;
 }
 
 .portfolio-info {
@@ -43,6 +81,7 @@ export default {};
   z-index: 1;
   display: flex;
   width: 50%;
+  padding: 0 3rem;
 }
 
 img {
@@ -55,7 +94,6 @@ img {
 
 .image-wrapper {
   height: 100%;
-  vertical-align: middle;
   width: 100%;
   position: relative;
 }

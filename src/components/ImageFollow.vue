@@ -34,9 +34,8 @@ export default {
 <style scoped>
 .follow-img {
   opacity: 0;
-  width: 250px;
+  width: 100px;
   height: auto;
-  max-width: 400px;
   box-sizing: border-box;
   transition: ease 0.2s;
   position: absolute;

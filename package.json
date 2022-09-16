@@ -31,6 +31,17 @@
     "terser": "^5.14.2",
     "vite": "^3.0.2",
     "vitest": "^0.18.1",
+    "vue-jest": "^3.0.7",
     "vue-template-compiler": "^2.7.7"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
+    }
   }
 }

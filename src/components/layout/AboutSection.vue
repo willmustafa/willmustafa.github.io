@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h2 class="bold mb-2">{{ $t("about.title") }}</h2>
     <h5>{{ $t("about.description") }}</h5>
-    <h4 class="bold mt-1">Algumas tecnologias que trabalho:</h4>
+    <h4 class="bold mt-2 mb-1">Algumas tecnologias que trabalho:</h4>
     <ul class="skills">
       <ImageFollow :image="JavascriptLogo" text="Javascript" />
       <ImageFollow :image="ReactLogo" text="React" />
