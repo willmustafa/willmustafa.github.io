@@ -1,0 +1,119 @@
+@import "./base.css";
+
+h1, .h1 {
+    font-size: 7rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+h2, .h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h3, .h3 {
+    font-size: 1.5rem;
+}
+
+h4, .h4 {
+    font-size: 1.25rem;
+}
+
+h5, .h5 {
+    font-size: 1rem;
+}
+
+b, .b, .bold {
+    font-weight: 900 !important;
+}
+
+.container{
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vertical-center{
+    display: flex;
+    -moz-box-pack: center;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    -moz-box-align: center;
+}
+
+.title {
+    font-family: 'Noto Serif', -apple-system, sans-serif;
+    letter-spacing: 7px;
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media screen and (min-width: 1400px){
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px){
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-purple{
+    color: var(--purple)
+}
+
+.text-green{
+    color: var(--green)
+}
+
+.text-neon-blue{
+    color: var(--neon-blue)
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 1.5rem;
+}
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 1.5rem;
+}

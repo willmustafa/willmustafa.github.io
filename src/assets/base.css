@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;900&family=Noto+Serif:wght@400;700&display=swap');
+
+:root{
+  --white-bluesh: #f4f9fc;
+  --navy-blue: #182d51;
+  --navy-green: #096873;
+  --violet-blue: #3971b7;
+  --neon-blue: #37c2c3;
+  --green: #549138;
+  --purple: #81479c;
+
+  --header-height: 120px;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--white-bluesh);
+  --color-text: var(--navy-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--navy-blue);
+    --color-text: var(--white-bluesh);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: unset;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Noto Sans', -apple-system, sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
