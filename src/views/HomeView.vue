@@ -22,10 +22,10 @@ export default {
   <main class="container">
     <section class="vertical-center">
       <div class="w-50">
-        <h4 class="mb-1">
+        <h4>
           {{ $t("home.jumbo") }}
         </h4>
-        <h1 class="title bold">Willian Mustafa</h1>
+        <h1 class="jumbo bold">Willian Mustafa</h1>
         <h3 v-html="$t('home.headline')"></h3>
         <h3 v-html="$t('home.working')"></h3>
       </div>
@@ -68,5 +68,11 @@ main {
 
 .hero-img > img {
   width: 70%;
+}
+
+.jumbo {
+  font-family: "Noto Serif", -apple-system, sans-serif;
+  letter-spacing: 7px;
+  margin-bottom: 1.5rem;
 }
 </style>

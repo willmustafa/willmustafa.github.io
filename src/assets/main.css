@@ -47,8 +47,8 @@ b, .b, .bold {
 }
 
 .title {
-    font-family: 'Noto Serif', -apple-system, sans-serif;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
 }
 
 .text-justify{
