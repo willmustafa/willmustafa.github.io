@@ -22,6 +22,8 @@
   :root {
     --color-background: var(--navy-blue);
     --color-text: var(--white-bluesh);
+    --color-secondary: var(--green);
+    --color-secondary-darker: var(--navy-green)
   }
 }
 

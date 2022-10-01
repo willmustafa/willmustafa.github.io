@@ -25,6 +25,7 @@ export default {
     description: "",
     name: "Nome",
     message: "Mensagem",
+    messagePlaceholder: "Estou precisando criar um site incrível!",
     send: "Enviar",
   },
 };
