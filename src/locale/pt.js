@@ -19,6 +19,7 @@ export default {
   },
   portfolio: {
     title: "Principais Projetos",
+    loadMore: "Ver mais projetos",
   },
   contact: {
     title: "Contato",

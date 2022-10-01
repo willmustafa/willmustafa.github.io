@@ -18,14 +18,16 @@
       image="https://n.foxdsgn.com/twilo/wp-content/uploads/elementor/thumbs/Frame-158-1-pt08ediwc60gle6gtgzemt60p3k2y0h4xmia58gimm.png"
       right
     />
+    <ButtonSimple>{{ $t("portfolio.loadMore") }}</ButtonSimple>
   </section>
 </template>
 
 <script>
 import PorfolioPrincipalElement from "../PorfolioPrincipalElement.vue";
+import ButtonSimple from "../UI/ButtonSimple.vue";
 export default {
   name: "PortfolioPrincipal",
-  components: { PorfolioPrincipalElement },
+  components: { PorfolioPrincipalElement, ButtonSimple },
 };
 </script>
 
