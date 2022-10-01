@@ -14,7 +14,7 @@
             :placeholder="$t('contact.messagePlaceholder')"
           />
         </FormGroup>
-        <ButtonSubmit :name="$t('contact.send')" />
+        <ButtonSimple :name="$t('contact.send')" type="submit" />
       </div>
     </div>
   </form>
@@ -24,9 +24,10 @@
 import FormGroup from "./UI/FormGroup.vue";
 import InputText from "./UI/InputText.vue";
 import TextArea from "./UI/TextArea.vue";
-import ButtonSubmit from "./UI/ButtonSubmit.vue";
+import ButtonSimple from "./UI/ButtonSimple.vue";
+
 export default {
-  components: { FormGroup, InputText, TextArea, ButtonSubmit },
+  components: { FormGroup, InputText, TextArea, ButtonSimple },
   methods: {
     onSubmit() {},
   },
