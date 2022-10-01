@@ -10,7 +10,6 @@ export default {
   props: {
     type: {
       type: String,
-      required: true,
       default: "button",
       validator(value) {
         return ["button", "reset", "submit"].includes(value?.toLowerCase());
