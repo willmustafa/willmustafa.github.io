@@ -14,7 +14,7 @@
             :placeholder="$t('contact.messagePlaceholder')"
           />
         </FormGroup>
-        <ButtonSimple :name="$t('contact.send')" type="submit" />
+        <ButtonSimple type="submit">{{ $t("contact.send") }}</ButtonSimple>
       </div>
     </div>
   </form>

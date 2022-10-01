@@ -1,6 +1,6 @@
 <template>
   <button type="button">
-    {{ name }}
+    <slot />
   </button>
 </template>
 
@@ -8,11 +8,6 @@
 export default {
   name: "ButtonSimple",
   props: {
-    name: {
-      type: String,
-      required: true,
-      default: "",
-    },
     type: {
       type: String,
       required: true,
