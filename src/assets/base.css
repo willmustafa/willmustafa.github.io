@@ -3,19 +3,23 @@
 :root{
   --white-bluesh: #f4f9fc;
   --navy-blue: #182d51;
+  --navy-blue-opac: 24, 45, 81, 0.97;
   --navy-green: #096873;
   --violet-blue: #3971b7;
   --neon-blue: #37c2c3;
   --green: #549138;
   --purple: #81479c;
 
-  --header-height: 120px;
+  --header-height: 100px;
+  --header-shadow: #080e19;
 }
 
 /* semantic color variables for this project */
 :root {
   --color-background: var(--white-bluesh);
   --color-text: var(--navy-blue);
+  --color-secondary: var(--navy-green);
+  --color-secondary-darker: var(--green)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,7 +27,8 @@
     --color-background: var(--navy-blue);
     --color-text: var(--white-bluesh);
     --color-secondary: var(--green);
-    --color-secondary-darker: var(--navy-green)
+    --color-secondary-darker: var(--navy-green);
+    --header-color: rgb(var(--navy-blue-opac));
   }
 }
 

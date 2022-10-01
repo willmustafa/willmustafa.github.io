@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ 'is-hidden': !showHeader }">
     <nav class="container">
       <div class="logo">
         <a href="/">
@@ -16,7 +16,16 @@
 
 <script>
 import NavLinks from "./NavLinks.vue";
-export default { components: { NavLinks } };
+
+export default {
+  name: "HeaderNav",
+  components: { NavLinks },
+  props: {
+    showHeader: {
+      type: Boolean,
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -29,6 +38,14 @@ header {
   width: 100%;
   z-index: 10;
   height: var(--header-height);
+  background-color: var(--header-color);
+  box-shadow: 0 10px 30px -10px var(--header-shadow);
+  transform: translateY(0);
+  transition: transform 300ms linear;
+}
+
+header.is-hidden {
+  transform: translateY(-100%);
 }
 
 nav {
