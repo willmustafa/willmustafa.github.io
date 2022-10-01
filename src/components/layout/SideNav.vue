@@ -2,7 +2,9 @@
   <div class="side-nav">
     <ul>
       <li>
-        <a href="#"> willianfmustafa@gmail.com </a>
+        <a href="mailto:willianfmustafa@gmail.com"
+          >willianfmustafa@gmail.com
+        </a>
       </li>
     </ul>
   </div>

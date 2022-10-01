@@ -14,6 +14,9 @@ const router = new VueRouter({
       component: HomeView,
     },
   ],
+  scrollBehavior(to) {
+    if (to.hash) return { el: to.hash };
+  },
 });
 
 export default router;

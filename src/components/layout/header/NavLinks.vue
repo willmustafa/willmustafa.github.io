@@ -1,16 +1,16 @@
 <template>
   <ol>
     <li>
-      <router-link to="/">{{ $t("nav.home") }}</router-link>
+      <router-link to="#home">{{ $t("nav.home") }}</router-link>
     </li>
     <li>
-      <router-link to="/">{{ $t("nav.portfolio") }}</router-link>
+      <router-link to="#portfolio">{{ $t("nav.portfolio") }}</router-link>
     </li>
     <li>
-      <router-link to="/">{{ $t("nav.about") }}</router-link>
+      <router-link to="#about">{{ $t("nav.about") }}</router-link>
     </li>
     <li>
-      <router-link to="/">{{ $t("nav.contact") }}</router-link>
+      <router-link to="#contact">{{ $t("nav.contact") }}</router-link>
     </li>
   </ol>
 </template>

@@ -2,17 +2,17 @@
   <div class="social-links">
     <ul>
       <li>
-        <a href="#">
+        <a href="https://github.com/willmustafa">
           <GithubIcon />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/willianmustafa/">
           <LinkedinIcon />
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="https://www.instagram.com/back.tofront_/">
           <InstagramIcon />
         </a>
       </li>
