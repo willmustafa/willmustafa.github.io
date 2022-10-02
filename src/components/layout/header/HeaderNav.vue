@@ -41,11 +41,12 @@ header {
   background-color: var(--header-color);
   box-shadow: 0 10px 30px -10px var(--header-shadow);
   transform: translateY(0);
-  transition: transform 300ms linear;
+  transition: transform 300ms linear, box-shadow 300ms linear;
 }
 
 header.is-hidden {
   transform: translateY(-100%);
+  box-shadow: none;
 }
 
 nav {
