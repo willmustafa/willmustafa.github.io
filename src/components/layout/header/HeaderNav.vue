@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'is-hidden': !showHeader }">
+  <header :class="{ 'is-hidden': !showHeader, 'is-home': headerAtHome }">
     <nav class="container">
       <div class="logo">
         <a href="/">
@@ -24,6 +24,9 @@ export default {
     showHeader: {
       type: Boolean,
     },
+    headerAtHome: {
+      type: Boolean,
+    },
   },
 };
 </script>
@@ -42,6 +45,10 @@ header {
   box-shadow: 0 10px 30px -10px var(--header-shadow);
   transform: translateY(0);
   transition: transform 300ms linear, box-shadow 300ms linear;
+}
+
+.is-home {
+  box-shadow: none;
 }
 
 header.is-hidden {

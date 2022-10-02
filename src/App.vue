@@ -8,6 +8,7 @@ export default {
   components: { HeaderNav, SocialLinks, SideNav },
   data: () => ({
     showHeader: true,
+    headerAtHome: true,
     lastScrollPosition: 0,
     scrollOffset: 40,
   }),
@@ -31,6 +32,7 @@ export default {
       }
       this.showHeader = window.pageYOffset < this.lastScrollPosition;
       this.lastScrollPosition = window.pageYOffset;
+      this.headerAtHome = window.scrollY < 120;
     },
   },
 };
@@ -38,7 +40,7 @@ export default {
 
 <template>
   <div id="app">
-    <HeaderNav :showHeader="showHeader" />
+    <HeaderNav :showHeader="showHeader" :headerAtHome="headerAtHome" />
     <router-view />
     <SocialLinks />
     <SideNav />
