@@ -16,7 +16,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "NavLinks",
+};
 </script>
 
 <style scoped>
@@ -29,5 +31,9 @@ ol {
 li {
   position: relative;
   margin: 0 2rem;
+}
+
+li:hover {
+  color: var(--neon-blue);
 }
 </style>
