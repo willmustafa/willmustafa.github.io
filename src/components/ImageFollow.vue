@@ -82,7 +82,7 @@ li:hover span {
   clip-path: inset(-1px 0 -1px 0);
 }
 
-li::after {
+li:not(:nth-last-of-type(1))::after {
   content: "/";
   position: absolute;
   right: -2rem;
