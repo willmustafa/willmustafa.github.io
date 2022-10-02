@@ -1,9 +1,10 @@
 <template>
   <input
     :name="name"
-    type="text"
+    :type="type"
     class="feedback-input"
     :placeholder="placeholder"
+    :required="required"
   />
 </template>
 
@@ -18,6 +19,14 @@ export default {
     placeholder: {
       type: String,
       default: "",
+    },
+    required: {
+      type: Boolean,
+      default: false,
+    },
+    type: {
+      type: String,
+      default: "text",
     },
   },
 };
@@ -40,7 +49,14 @@ input {
   outline: 0;
 }
 
-input:focus {
-  border: 2px solid var(--color-secondary);
+input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--purple);
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+  border-color: var(--green);
 }
 </style>

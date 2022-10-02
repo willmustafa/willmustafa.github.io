@@ -8,6 +8,7 @@
 
 <script>
 import ContactForm from "../ContactForm.vue";
+
 export default {
   name: "ContactSection",
   components: { ContactForm },

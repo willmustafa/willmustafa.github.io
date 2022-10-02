@@ -70,5 +70,10 @@ export default {
 .side-nav li a {
   width: 20px;
   height: 20px;
+  transition: color 0.3s ease;
+}
+
+.side-nav li:hover a {
+  color: var(--neon-blue);
 }
 </style>

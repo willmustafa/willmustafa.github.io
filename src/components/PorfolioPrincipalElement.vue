@@ -97,4 +97,8 @@ img {
   width: 100%;
   position: relative;
 }
+
+.portfolio-wrapper:hover .title {
+  color: var(--neon-blue);
+}
 </style>

@@ -49,6 +49,7 @@ b, .b, .bold {
 .title {
     letter-spacing: 2px;
     margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .text-justify{

@@ -1,5 +1,9 @@
 <template>
-  <textarea :name="name" :placeholder="placeholder"></textarea>
+  <textarea
+    :name="name"
+    :placeholder="placeholder"
+    :required="required"
+  ></textarea>
 </template>
 
 <script>
@@ -13,6 +17,10 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    required: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -39,7 +47,14 @@ textarea {
   color: var(--color-text);
 }
 
-textarea:focus {
-  border: 2px solid var(--color-secondary);
+textarea:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--purple);
+}
+textarea:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+textarea:not(:focus):not(:placeholder-shown):valid {
+  border-color: var(--green);
 }
 </style>
