@@ -2,9 +2,9 @@
   <header :class="{ 'is-hidden': !showHeader, 'is-home': headerAtHome }">
     <nav class="container">
       <div class="logo">
-        <a href="/">
+        <router-link to="/">
           <img src="@/assets/images/logo.png" alt="" />
-        </a>
+        </router-link>
       </div>
       <div class="nav-wrapper">
         <NavLinks />
