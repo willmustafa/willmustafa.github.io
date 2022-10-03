@@ -4,7 +4,8 @@ import i18n from "./I18n";
 import App from "./App.vue";
 import router from "./router";
 
-import "./assets/main.css";
+import "./assets/styles/main.css";
+import "./assets/styles/grid.css";
 
 new Vue({
   i18n,

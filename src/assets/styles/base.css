@@ -2,6 +2,7 @@
 
 :root{
   --white-bluesh: #f4f9fc;
+  --white-bluesh-opac: 244, 249, 252, 0.85;
   --navy-blue: #182d51;
   --navy-blue-opac: 24, 45, 81, 0.97;
   --navy-green: #096873;
@@ -12,6 +13,7 @@
 
   --header-height: 100px;
   --header-shadow: #080e19;
+  --border-radius: 1rem
 }
 
 /* semantic color variables for this project */
