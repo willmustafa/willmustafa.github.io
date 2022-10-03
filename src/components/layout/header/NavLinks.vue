@@ -1,16 +1,29 @@
 <template>
   <ol>
     <li>
-      <router-link to="#home">{{ $t("nav.home") }}</router-link>
+      <router-link :to="`${isHome ? '#' : '/#'}home`">{{
+        $t("nav.home")
+      }}</router-link>
     </li>
     <li>
-      <router-link to="#about">{{ $t("nav.about") }}</router-link>
+      <router-link :to="`${isHome ? '#' : '/#'}about`">{{
+        $t("nav.about")
+      }}</router-link>
     </li>
     <li>
-      <router-link to="#portfolio">{{ $t("nav.portfolio") }}</router-link>
+      <router-link :to="`${isHome ? '#' : '/#'}portfolio`">{{
+        $t("nav.portfolio")
+      }}</router-link>
     </li>
     <li>
-      <router-link to="#contact">{{ $t("nav.contact") }}</router-link>
+      <router-link :to="`${isHome ? '/' : '#'}blog`">{{
+        $t("nav.blog")
+      }}</router-link>
+    </li>
+    <li>
+      <router-link :to="`${isHome ? '#' : '/#'}contact`">{{
+        $t("nav.contact")
+      }}</router-link>
     </li>
   </ol>
 </template>
@@ -18,6 +31,16 @@
 <script>
 export default {
   name: "NavLinks",
+  data() {
+    return {
+      isHome: true,
+    };
+  },
+  watch: {
+    $route: function () {
+      this.isHome = this.$route.path === "/";
+    },
+  },
 };
 </script>
 
