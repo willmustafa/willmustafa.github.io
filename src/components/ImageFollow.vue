@@ -40,7 +40,7 @@ export default {
   transition: ease 0.2s;
   position: absolute;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 0;
   object-fit: cover;
 }
 
@@ -75,6 +75,7 @@ li span {
   -webkit-clip-path: inset(-1px 100% -1px 0);
   clip-path: inset(-1px 100% -1px 0);
   cursor: default;
+  z-index: 2;
 }
 
 li:hover span {
