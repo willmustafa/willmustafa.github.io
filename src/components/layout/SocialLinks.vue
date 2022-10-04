@@ -74,7 +74,7 @@ export default {
 }
 
 .social-links li:hover {
-  fill: var(--neon-blue);
+  fill: var(--color-secondary);
 }
 
 .social-links li a {
