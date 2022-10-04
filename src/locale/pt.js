@@ -9,6 +9,7 @@ export default {
   nav: {
     home: "Home",
     portfolio: "Portfolio",
+    blog: "Blog",
     about: "Sobre",
     contact: "Contato",
   },
