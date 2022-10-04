@@ -57,6 +57,6 @@ li {
 }
 
 li:hover {
-  color: var(--neon-blue);
+  color: var(--color-secondary);
 }
 </style>
