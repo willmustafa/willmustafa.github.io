@@ -64,7 +64,7 @@ export default {
 }
 
 .side-nav li:hover {
-  fill: var(--neon-blue);
+  fill: var(--color-secondary);
 }
 
 .side-nav li a {
@@ -74,6 +74,6 @@ export default {
 }
 
 .side-nav li:hover a {
-  color: var(--neon-blue);
+  color: var(--color-secondary);
 }
 </style>
