@@ -2,6 +2,7 @@
 import HeaderNav from "./components/layout/header/HeaderNav.vue";
 import SocialLinks from "./components/layout/SocialLinks.vue";
 import SideNav from "./components/layout/SideNav.vue";
+import FaviconChanger from "./assets/icons/FaviconChanger";
 
 export default {
   name: "App",
@@ -13,6 +14,7 @@ export default {
     scrollOffset: 40,
   }),
   mounted() {
+    FaviconChanger();
     this.lastScrollPosition = window.pageYOffset;
     window.addEventListener("scroll", this.onScroll);
   },
