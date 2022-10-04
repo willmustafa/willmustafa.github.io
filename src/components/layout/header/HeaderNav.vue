@@ -3,7 +3,8 @@
     <nav class="container">
       <div class="logo">
         <router-link to="/">
-          <img src="@/assets/images/logo.png" alt="" />
+          <img class="light-logo" src="@/assets/images/logo.png" alt="" />
+          <img class="dark-logo" src="@/assets/images/light-logo.png" alt="" />
         </router-link>
       </div>
       <div class="nav-wrapper">
@@ -73,7 +74,7 @@ nav {
 }
 
 .logo img {
-  width: 120px;
+  width: 35px;
 }
 
 .nav-wrapper {
@@ -85,6 +86,22 @@ nav {
 @media screen and (max-width: 768px) {
   header {
     padding: 0px 50px;
+  }
+}
+
+.dark-logo {
+  display: none;
+}
+.light-logo {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-logo {
+    display: block;
+  }
+  .light-logo {
+    display: none;
   }
 }
 </style>
