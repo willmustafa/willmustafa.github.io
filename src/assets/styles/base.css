@@ -13,7 +13,7 @@
 
   --header-height: 100px;
   --header-shadow: #080e19;
-  --border-radius: 1rem
+  --border-radius: 1rem;
 }
 
 /* semantic color variables for this project */
@@ -21,7 +21,8 @@
   --color-background: var(--white-bluesh);
   --color-text: var(--navy-blue);
   --color-secondary: var(--navy-green);
-  --color-secondary-darker: var(--green)
+  --color-secondary-darker: var(--green);
+  --code-background-block: #343434;
 }
 
 @media (prefers-color-scheme: dark) {

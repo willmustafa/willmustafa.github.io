@@ -27,6 +27,10 @@ b, .b, .bold {
     font-weight: 900 !important;
 }
 
+a:hover{
+    color: var(--color-secondary)
+}
+
 .vertical-center{
     display: flex;
     -moz-box-pack: center;

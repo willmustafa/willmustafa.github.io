@@ -6,6 +6,20 @@
     margin-left: auto;
 }
 
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+}
+
 .col {
 flex: 1 0 0%;
 }
