@@ -16,9 +16,7 @@
       }}</router-link>
     </li>
     <li>
-      <router-link :to="`${isHome ? '/' : '#'}blog`">{{
-        $t("nav.blog")
-      }}</router-link>
+      <router-link :to="`/blog`">{{ $t("nav.blog") }}</router-link>
     </li>
     <li>
       <router-link :to="`${isHome ? '#' : '/#'}contact`">{{
@@ -38,7 +36,7 @@ export default {
   },
   watch: {
     $route: function () {
-      this.isHome = this.$route.path === "/";
+      this.isHome = this.$route.name === "home";
     },
   },
 };

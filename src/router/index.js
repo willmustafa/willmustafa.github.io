@@ -31,6 +31,8 @@ const router = new VueRouter({
       component: BlogView,
     },
   ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "active",
   scrollBehavior(to) {
     if (to.hash) {
       return { selector: to.hash, behavior: "smooth" };
