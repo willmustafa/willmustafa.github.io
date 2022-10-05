@@ -5,15 +5,24 @@ export default class fetchPosts {
     this.url = `https://api.cosmicjs.com/v2/buckets/${
       import.meta.env.VITE_COSMIC_BUCKET
     }/objects`;
+
+    this.url_categories = `https://api.cosmicjs.com/v2/buckets/${
+      import.meta.env.VITE_COSMIC_BUCKET
+    }/object-types`;
   }
 
-  async getPosts() {
+  async getPosts(queryObj = null) {
+    const params = {
+      read_key: import.meta.env.VITE_COSMIC_APIKEY,
+      limit: 10,
+      sort: "created_at",
+    };
+
+    if (queryObj) params.query = { ...queryObj };
+
     return await axios
       .get(this.url, {
-        params: {
-          read_key: import.meta.env.VITE_COSMIC_APIKEY,
-          limit: 10,
-        },
+        params,
       })
       .then((res) => res.data);
   }
@@ -30,9 +39,7 @@ export default class fetchPosts {
   }
 
   async getPostsByTitle(title) {
-    const query = encodeURI(
-      JSON.stringify({ title: { $regex: title, $options: "i" } })
-    );
+    const query = this.encode({ title: { $regex: title, $options: "i" } });
 
     const link = `${this.url}?read_key=${
       import.meta.env.VITE_COSMIC_APIKEY
@@ -53,5 +60,17 @@ export default class fetchPosts {
         },
       })
       .then((res) => res.data?.objects);
+  }
+
+  async getCategories() {
+    return await axios
+      .get(
+        `${this.url_categories}?read_key=${import.meta.env.VITE_COSMIC_APIKEY}`
+      )
+      .then((res) =>
+        res.data.object_types.map((el) => {
+          return { title: el.singular, slug: el.slug };
+        })
+      );
   }
 }

@@ -4,20 +4,32 @@
       <span class="sidebar-title"><span>Topics</span></span>
     </h5>
     <ul>
-      <SidebarList link="/blog/programacao" title="Programação" />
-      <SidebarList link="/blog/javascript" title="JavaScript" />
-      <SidebarList link="/blog/css" title="CSS" />
-      <SidebarList link="/blog/vue" title="VUE" />
-      <SidebarList link="/blog/react" title="React" />
-      <SidebarList link="/blog/nosql" title="NoSQL" />
-      <SidebarList link="/blog/SQL" title="SQL" />
+      <SidebarList
+        v-for="(category, index) of categories"
+        :key="index"
+        :link="`/blog/${category.slug}`"
+        :title="category.title"
+      />
     </ul>
   </div>
 </template>
 
 <script>
 import SidebarList from "../UI/SidebarList.vue";
-export default { components: { SidebarList } };
+import fetchPosts from "../../blog/fetchPosts";
+
+export default {
+  components: { SidebarList },
+  data() {
+    return {
+      categories: [],
+    };
+  },
+  async mounted() {
+    const api = new fetchPosts();
+    await api.getCategories().then((el) => (this.categories = el));
+  },
+};
 </script>
 
 <style scoped>

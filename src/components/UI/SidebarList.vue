@@ -22,7 +22,6 @@ export default {
     },
     count: {
       type: String || Number,
-      default: 0,
     },
   },
 };
