@@ -7,7 +7,7 @@
       </h1>
       <div class="content" v-html="blogPosts?.content"></div>
     </article>
-    <RelatedPosts />
+    <RelatedPosts :currentPost="blogPosts" />
   </div>
 </template>
 
