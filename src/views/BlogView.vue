@@ -40,10 +40,26 @@ export default {
       tmp.innerHTML = html;
       return tmp.innerText.substring(0, 200);
     },
+    async getPosts() {
+      const metatype = this.$route.params?.metatype;
+      let query = null;
+
+      if (metatype)
+        query = {
+          type: metatype,
+        };
+
+      const api = new fetchPosts();
+      await api.getPosts(query).then((res) => (this.posts = res.objects));
+    },
   },
   async mounted() {
-    const api = new fetchPosts();
-    await api.getPosts().then((res) => (this.posts = res.objects));
+    await this.getPosts();
+  },
+  watch: {
+    $route: async function () {
+      await this.getPosts();
+    },
   },
 };
 </script>
