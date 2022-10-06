@@ -30,4 +30,8 @@ export default {
     messagePlaceholder: "Estou precisando criar um site incrível!",
     send: "Enviar",
   },
+  blog: {
+    relatedPosts: "Posts Relacionados",
+    topic: "Tópicos",
+  },
 };

@@ -1,12 +1,12 @@
 <template>
   <div class="related-wrapper">
     <div>
-      <h2 class="row related-title">Posts Relacionados</h2>
+      <h2 class="row related-title">{{ $t("blog.relatedPosts") }}</h2>
       <div class="row related-posts">
         <CardSimple
           v-for="post of posts"
           :key="post.id"
-          classes="col-12 col-md-4"
+          classes="col-12 col-md-6 col-lg-4"
           :title="post.title"
           :content="prepareContent(post.content)"
         />

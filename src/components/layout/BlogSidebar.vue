@@ -1,7 +1,9 @@
 <template>
   <div class="sidebar">
     <h5>
-      <span class="sidebar-title"><span>Topics</span></span>
+      <span class="sidebar-title"
+        ><span>{{ $t("blog.topic") }}</span></span
+      >
     </h5>
     <ul>
       <SidebarList
