@@ -9,6 +9,7 @@ export default {
   nav: {
     home: "Home",
     portfolio: "Portfolio",
+    blog: "Blog",
     about: "About",
     contact: "Contact",
   },
@@ -19,6 +20,7 @@ export default {
   },
   portfolio: {
     title: "Featured Projects",
+    loadMore: "Load More Projects",
   },
   contact: {
     title: "Contact",
@@ -27,5 +29,9 @@ export default {
     message: "Message",
     messagePlaceholder: "I need an incredible website!",
     send: "Send",
+  },
+  blog: {
+    relatedPosts: "Related",
+    topic: "Topics",
   },
 };
