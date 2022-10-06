@@ -89,4 +89,10 @@ li:not(:nth-last-of-type(1))::after {
   right: -2rem;
   top: 0;
 }
+
+@media (max-width: 768px) {
+  li {
+    font-size: 2rem;
+  }
+}
 </style>

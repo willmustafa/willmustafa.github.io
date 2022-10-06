@@ -57,4 +57,17 @@ li {
 li:hover {
   color: var(--color-secondary);
 }
+
+@media screen and (max-width: 768px) {
+  ol {
+    flex-direction: column !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    text-align: center;
+    line-height: 2rem;
+  }
+}
 </style>

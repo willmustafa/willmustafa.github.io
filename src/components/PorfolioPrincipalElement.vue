@@ -4,13 +4,13 @@
     :href="link"
     :class="{ 'flex-row-reverse': right }"
   >
-    <div class="portfolio-info">
+    <div class="portfolio-info col-12 col-md-6">
       <h5 class="text-neon-blue">{{ overTitle }}</h5>
       <h2 class="title bold uppercase">{{ title }}</h2>
       <h3 class="mb-2">{{ subtitle }}</h3>
       <h4>{{ description }}</h4>
     </div>
-    <div class="portfolio-image">
+    <div class="portfolio-image col-12 col-md-6">
       <div class="image-wrapper">
         <img :src="image" alt="" />
       </div>
@@ -70,7 +70,6 @@ export default {
 .portfolio-info {
   position: relative;
   z-index: 2;
-  width: 50%;
   display: flex;
   flex-direction: column;
   margin-right: 4rem;
@@ -80,7 +79,6 @@ export default {
   position: relative;
   z-index: 1;
   display: flex;
-  width: 50%;
   padding: 0 3rem;
 }
 
@@ -96,5 +94,21 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .portfolio-wrapper {
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+
+  .portfolio-info {
+    margin-right: 0 !important;
+  }
+
+  .portfolio-image {
+    margin-top: 2rem;
+    padding: 0 3rem;
+  }
 }
 </style>

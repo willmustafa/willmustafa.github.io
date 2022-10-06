@@ -81,4 +81,10 @@ export default {
   width: 20px;
   height: 20px;
 }
+
+@media (max-width: 768px) {
+  .social-links {
+    display: none;
+  }
+}
 </style>

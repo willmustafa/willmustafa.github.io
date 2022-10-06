@@ -7,20 +7,27 @@
           <img class="dark-logo" src="@/assets/images/light-logo.png" alt="" />
         </router-link>
       </div>
-      <div class="nav-wrapper">
+      <button
+        type="button"
+        class="navbar-toggler collapsed"
+        @click="toggleCollapseNavbar"
+      >
+        <span class="navbar-toggler-icon"><BarsIcon /></span>
+      </button>
+      <div class="nav-wrapper" :class="{ show: collapsed }">
         <NavLinks />
       </div>
-      <div class="collapsed"></div>
     </nav>
   </header>
 </template>
 
 <script>
 import NavLinks from "./NavLinks.vue";
+import BarsIcon from "../../../assets/icons/BarsIcon.vue";
 
 export default {
   name: "HeaderNav",
-  components: { NavLinks },
+  components: { NavLinks, BarsIcon },
   props: {
     showHeader: {
       type: Boolean,
@@ -29,10 +36,57 @@ export default {
       type: Boolean,
     },
   },
+  data() {
+    return {
+      collapsed: false,
+    };
+  },
+  methods: {
+    toggleCollapseNavbar() {
+      this.collapsed = !this.collapsed;
+    },
+  },
 };
 </script>
 
 <style scoped>
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: auto;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: 50%/100% 100% no-repeat;
+}
+
+.navbar-toggler-icon > svg {
+  fill: var(--color-text);
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+
+  .nav-wrapper {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    align-items: center;
+    margin-left: auto;
+    justify-content: end;
+  }
+}
+
 header {
   display: flex;
   align-items: center;
@@ -77,15 +131,35 @@ nav {
   width: 35px;
 }
 
+.nav-wrapper:not(.show) {
+  display: none;
+}
+
 .nav-wrapper {
-  display: flex;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-align: center;
   align-items: center;
-  margin-left: auto;
 }
 
 @media screen and (max-width: 768px) {
   header {
     padding: 0px 50px;
+    display: block;
+  }
+
+  .logo {
+    padding: 1rem 0;
+  }
+
+  .nav-wrapper {
+    background: var(--color-background);
+  }
+
+  nav {
+    flex-wrap: wrap;
   }
 }
 

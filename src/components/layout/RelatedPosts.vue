@@ -6,7 +6,7 @@
         <CardSimple
           v-for="post of posts"
           :key="post.id"
-          classes="col-4"
+          classes="col-12 col-md-4"
           :title="post.title"
           :content="prepareContent(post.content)"
         />

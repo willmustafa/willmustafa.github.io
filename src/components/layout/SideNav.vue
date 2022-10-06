@@ -76,4 +76,10 @@ export default {
 .side-nav li:hover a {
   color: var(--color-secondary);
 }
+
+@media (max-width: 768px) {
+  .side-nav {
+    display: none;
+  }
+}
 </style>

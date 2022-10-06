@@ -10,7 +10,7 @@
       :description="project.description"
       :link="project.link"
       :image="project.image"
-      :right="project.id % 2"
+      :right="project.id % 2 === 1"
     />
     <ButtonSimple v-if="loadMore.length">{{
       $t("portfolio.loadMore")
@@ -37,4 +37,16 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 4rem;
+  }
+}
+</style>

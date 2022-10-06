@@ -21,7 +21,7 @@ export default {
 <template>
   <main class="container">
     <section class="vertical-center" id="home">
-      <div class="w-50">
+      <div class="col-12 col-md-6">
         <h4>
           {{ $t("home.jumbo") }}
         </h4>

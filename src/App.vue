@@ -63,5 +63,7 @@ export default {
 
 #app {
   background-color: var(--color-background);
+  width: 100vw;
+  overflow-x: hidden;
 }
 </style>

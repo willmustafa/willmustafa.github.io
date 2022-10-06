@@ -50,4 +50,10 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 4rem;
+  }
+}
 </style>
