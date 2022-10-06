@@ -2,32 +2,38 @@
   <section>
     <h2 class="bold mb-2">{{ $t("portfolio.title") }}</h2>
     <PorfolioPrincipalElement
-      overTitle="Projeto Open Source"
-      title="Money 7"
-      subtitle="React, Express, Postgres"
-      description="Site para controle financeiro, com importação de movimentações e
-        definições de metas."
-      image="https://quiety.themetags.com/assets/img/app-two-feature-phone-with-shape.png"
+      v-for="project of projects"
+      :key="project.id"
+      :overTitle="project?.openSource ? 'Projeto Open Source' : ''"
+      :title="project.title"
+      :subtitle="project.categories"
+      :description="project.description"
+      :link="project.link"
+      :image="project.image"
+      :right="project.id % 2"
     />
-    <PorfolioPrincipalElement
-      overTitle="Projeto Open Source"
-      title="Money 7"
-      subtitle="React, Express, Postgres"
-      description="Site para controle financeiro, com importação de movimentações e
-        definições de metas."
-      image="https://n.foxdsgn.com/twilo/wp-content/uploads/elementor/thumbs/Frame-158-1-pt08ediwc60gle6gtgzemt60p3k2y0h4xmia58gimm.png"
-      right
-    />
-    <ButtonSimple>{{ $t("portfolio.loadMore") }}</ButtonSimple>
+    <ButtonSimple v-if="loadMore.length">{{
+      $t("portfolio.loadMore")
+    }}</ButtonSimple>
   </section>
 </template>
 
 <script>
 import PorfolioPrincipalElement from "../PorfolioPrincipalElement.vue";
 import ButtonSimple from "../UI/ButtonSimple.vue";
+import Portfolio from "../../blog/projects.json";
+
 export default {
   name: "PortfolioPrincipal",
   components: { PorfolioPrincipalElement, ButtonSimple },
+  computed: {
+    projects() {
+      return Portfolio.featured;
+    },
+    loadMore() {
+      return Portfolio.others;
+    },
+  },
 };
 </script>
 

@@ -1,0 +1,32 @@
+{
+    "featured": [
+        {
+            "id": 0,
+            "title": "Money 7",
+            "categories": "React, Express, PostgreSQL",
+            "link": "https://github.com/willmustafa/Money7-Frontend",
+            "openSource": true,
+            "description": "Site para controle financeiro, com definição de objetivos, categorias, contas, cartão de crédito, objetivos, planejamento, etc.",
+            "image": "money7.png"
+        },
+        {
+            "id": 1,
+            "title": "Calculadora de Investimentos",
+            "categories": "HTML, Bootstrap",
+            "link": "https://calculadora-investimentos.pages.dev/",
+            "openSource": true,
+            "image": "calculadorainvest.png",
+            "description": "Calculadora de juros compostos através de perguntas em um sistema intuitívo e fácil de usar."
+        },
+        {
+            "id": 2,
+            "title": "How's Work",
+            "categories": "React, Express, MongoDB",
+            "link": "https://howswork.pages.dev/",
+            "openSource": true,
+            "image": "howswork.png",
+            "description": "Pesquisa para analisar as vagas de trabalho disponíveis no Linkedin na área de T.I. e correlaciona-las a outras pesquisas de mercado."
+        }
+    ],
+    "others": []
+}
