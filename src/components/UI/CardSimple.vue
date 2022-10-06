@@ -43,6 +43,18 @@ export default {
   overflow: hidden;
 }
 
+@media (prefers-color-scheme: light) {
+  .card {
+    background-color: var(--navy-blue);
+    color: var(--white-bluesh);
+  }
+
+  .card::after,
+  .card::before {
+    background: var(--navy-green) !important;
+  }
+}
+
 .card-inner {
   position: relative;
   display: flex;

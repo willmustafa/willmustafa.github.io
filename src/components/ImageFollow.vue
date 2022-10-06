@@ -60,7 +60,7 @@ li {
 }
 
 li span {
-  color: #fff;
+  color: var(--color-text);
   position: absolute;
   top: 0;
   left: 0;

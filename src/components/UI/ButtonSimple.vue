@@ -26,7 +26,7 @@ button {
   border-radius: 5px;
   border: 0;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--white-bluesh);
   font-size: 1.25rem;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -34,6 +34,7 @@ button {
   margin-top: -4px;
   font-weight: 700;
 }
+
 button:hover {
   background: var(--color-secondary);
 }

@@ -90,7 +90,13 @@ a:hover{
 }
 
 .text-neon-blue{
-    color: var(--neon-blue)
+    color: var(--purple)
+}
+
+@media (prefers-color-scheme: dark) {
+    .text-neon-blue{
+        color: var(--neon-blue)
+    }
 }
 
 .mb-1{

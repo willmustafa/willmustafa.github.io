@@ -106,4 +106,14 @@ export default {
 .blog-wrapper table tr:not(:nth-of-type(1)):nth-of-type(odd) {
   background: #5491383b;
 }
+
+@media (prefers-color-scheme: light) {
+  .blog-wrapper pre {
+    color: var(--white-bluesh);
+  }
+
+  .blog-wrapper table tr:nth-of-type(1) {
+    color: var(--white-bluesh);
+  }
+}
 </style>
