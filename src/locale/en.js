@@ -16,7 +16,7 @@ export default {
   about: {
     title: "About me",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at felis placerat, sagittis turpis sit amet, pretium enim. Praesent ac ornare elit. Integer fringilla ac risus ac porttitor. Nulla laoreet metus velit, at ultrices ex gravida eu. Quisque eu urna rutrum ex interdum scelerisque eget vitae lectus. Phasellus ornare sapien et blandit ornare. Suspendisse aliquam sed lectus a bibendum. Phasellus dapibus sagittis nibh ut posuere. Quisque viverra ligula et scelerisque tempus. Proin ligula tortor, lacinia vel justo aliquet, ultrices auctor nulla. Proin viverra consectetur nisl id viverra.",
+      "I am graduated in Civil Engineering and specialized in Software Engineering. During my time as a civil designer, I always looked for new technologies that would modernize the construction and automate my work, but I didn't find the necessary tools, so I decided to create them. I started in the programming world as a website developer still in high school, but it was as a Civil Engineer that I took a closer look at programming, starting with .NET and Javascript. Today I create solutions that help me on a daily basis, such as financial control and investments apps and also carry out research such as: What is the rate of book publications in Brazil for each ethnic group? Which politicians align with my principles?",
   },
   portfolio: {
     title: "Featured Projects",

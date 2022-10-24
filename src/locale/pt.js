@@ -16,7 +16,7 @@ export default {
   about: {
     title: "Sobre Mim",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at felis placerat, sagittis turpis sit amet, pretium enim. Praesent ac ornare elit. Integer fringilla ac risus ac porttitor. Nulla laoreet metus velit, at ultrices ex gravida eu. Quisque eu urna rutrum ex interdum scelerisque eget vitae lectus. Phasellus ornare sapien et blandit ornare. Suspendisse aliquam sed lectus a bibendum. Phasellus dapibus sagittis nibh ut posuere. Quisque viverra ligula et scelerisque tempus. Proin ligula tortor, lacinia vel justo aliquet, ultrices auctor nulla. Proin viverra consectetur nisl id viverra.",
+      "Sou formado em Engenharia Civil e especializado em Engenharia de Software. Durante minha época como projetista civil, sempre busquei tecnologias novas que modernizassem a obra e automatizasse meu trabalho, mas não encontrei as ferramentas necessárias, sendo assim resolvi criá-las. Iniciei no mundo da programação como desenvolvedor de sites ainda no ensino médio, mas foi como Engenheiro Civil que tomei gosto pela programação, iniciando com .NET e Javascript. Hoje procuro criar soluções que me auxiliem no dia a dia, como apps de controle financeiro e investimentos e também realizar pesquisas como: Qual o índice de publicações de livros no Brasil para cada etnia? Quais políticos se alinham com os meus princípios?",
   },
   portfolio: {
     title: "Principais Projetos",
