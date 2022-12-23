@@ -7,7 +7,8 @@ import loc_en from "./locale/en";
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-  locale: "pt",
+  locale:
+    navigator.language.split("-")[0] || navigator.userLanguage.split("-")[0],
   messages: {
     pt: loc_pt,
     en: loc_en,
