@@ -29,6 +29,9 @@ export default {
     message: "Mensagem",
     messagePlaceholder: "Estou precisando criar um site incrível!",
     send: "Enviar",
+    success: "Email enviado com sucesso!",
+    error:
+      "Ocorreu um erro, tente enviar um email diretamente para willianfmustafa@gmail.com",
   },
   blog: {
     relatedPosts: "Posts Relacionados",

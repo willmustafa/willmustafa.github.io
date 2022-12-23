@@ -39,6 +39,7 @@ import InputText from "./UI/InputText.vue";
 import TextArea from "./UI/TextArea.vue";
 import ButtonSimple from "./UI/ButtonSimple.vue";
 import AlertSimple from "./UI/AlertSimple.vue";
+import axios from "axios";
 
 export default {
   components: { FormGroup, InputText, TextArea, ButtonSimple, AlertSimple },
@@ -49,49 +50,23 @@ export default {
     };
   },
   methods: {
-    onSubmit(event) {
+    async onSubmit(event) {
       let name = event.target.name.value;
       let email = event.target.email.value;
-      let message = event.target.name.message;
+      let message = event.target.message.value;
 
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append(
-        "Authorization",
-        "Basic MGY3NmYyZWUxZDYyYzRkM2NkYjhiYTZkY2NjZWY2MzA6ZGM4Y2VjN2QzZWFmM2FiYTE1OGRhNDRjNmJjNzBjYWQ="
-      );
-
-      var raw = JSON.stringify({
-        Messages: [
+      await axios
+        .post(
+          "https://formspree.io/f/meqwjloj",
           {
-            From: {
-              Email: email,
-              Name: name,
-            },
-            To: [
-              {
-                Email: "willian2142@gmail.com",
-                Name: "Willian",
-              },
-            ],
-            Subject: "From Website",
-            TextPart: message,
+            email,
+            message: `From: ${name} - Message: ${message}`,
           },
-        ],
-      });
-
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
-
-      fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-        .then((response) => response.text())
-        .then((result) => (this.alertMessage = result))
-        .catch((error) => {
-          this.alertMessage = error;
+          { Accept: "application/json" }
+        )
+        .then(() => (this.alertMessage = this.$t("contact.success")))
+        .catch(() => {
+          this.alertMessage = this.$t("contact.error");
           this.alertVariation = "danger";
         });
     },
