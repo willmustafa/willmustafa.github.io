@@ -1,8 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import SinglePost from "../components/layout/SinglePost.vue";
-import BlogView from "../views/BlogView.vue";
 
 Vue.use(VueRouter);
 
@@ -14,21 +12,6 @@ const router = new VueRouter({
       path: "/",
       name: "home",
       component: HomeView,
-    },
-    {
-      path: "/blog",
-      name: "blog",
-      component: BlogView,
-    },
-    {
-      path: "/post/:slug",
-      name: "Blog-Single",
-      component: SinglePost,
-    },
-    {
-      path: "/blog/:metatype",
-      name: "Blog-Archive",
-      component: BlogView,
     },
   ],
   linkActiveClass: "active",

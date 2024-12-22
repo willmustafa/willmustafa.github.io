@@ -16,9 +16,6 @@
       }}</router-link>
     </li>
     <li>
-      <router-link :to="`/blog`">{{ $t("nav.blog") }}</router-link>
-    </li>
-    <li>
       <router-link :to="`${isHome ? '#' : '/#'}contact`">{{
         $t("nav.contact")
       }}</router-link>

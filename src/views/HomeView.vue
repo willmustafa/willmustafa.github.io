@@ -31,7 +31,7 @@ export default {
       </div>
       <div class="hero-img">
         <img
-          src="https://weblearnbd.net/tphtml/collax/collax/assets/img/hero/hero-2.png"
+          src="@/assets/images/persona.png"
           alt=""
         />
       </div>
